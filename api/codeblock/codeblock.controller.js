@@ -6,11 +6,7 @@ async function getCodeblocks(req, res) {
   try {
     logger.debug('Getting Codeblocks')
     const filterBy = {
-      name: req.query.name || '',
-      category: req.query.category || '',
-      stock: req.query.stock || '',
-      sortBy: req.query.sortBy || '',
-      amount: Number(req.query.amount) || 0,
+      txt: req.query.name || '',
     }
     const codeblocks = await codeblockService.query(filterBy)
     res.json(codeblocks)
