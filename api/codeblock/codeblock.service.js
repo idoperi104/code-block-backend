@@ -54,13 +54,10 @@ async function add(codeblock) {
 async function update(codeblock) {
   try {
     const codeblockToSave = {
-      name: codeblock.name,
-      desc: codeblock.desc,
-      imgUrl: codeblock.imgUrl,
-      category: codeblock.category,
-      price: codeblock.price,
-      isInStock: codeblock.isInStock,
-      salesAmount: codeblock.salesAmount,
+      title: codeblock.title,
+      question: codeblock.question,
+      code: codeblock.code,
+      solution: codeblock.solution,
     }
     const collection = await dbService.getCollection("codeblock")
     await collection.updateOne(
