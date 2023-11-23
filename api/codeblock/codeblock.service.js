@@ -74,8 +74,8 @@ async function update(codeblock) {
 function _buildCriteria(filterBy) {
   const criteria = {}
   if (filterBy.title) {
-    const nameCriteria = { $regex: filterBy.name, $options: "i" }
-    criteria.name = nameCriteria
+    const nameCriteria = { $regex: filterBy.title, $options: "i" }
+    criteria.title = nameCriteria
   }
   return criteria
 }
