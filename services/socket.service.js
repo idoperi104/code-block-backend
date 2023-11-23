@@ -33,8 +33,8 @@ function setupSocketAPI(http) {
     })
     socket.on("send-code", ({ title, code }) => {
       if (mentors[title] === socket.id) return
-    //   gIo.to(title).emit("update-code", code)
-      gIo.to(title).broadcast("update-code", code)
+      gIo.to(title).emit("update-code", code)
+    //   gIo.to(title).broadcast("update-code", code)
     })
     socket.on("set-user-socket", (userId) => {
       logger.info(
