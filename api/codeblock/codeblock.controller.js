@@ -3,7 +3,6 @@ const codeblockService = require('./codeblock.service.js')
 const logger = require('../../services/logger.service.js')
 
 async function getCodeblocks(req, res) {
-  console.log("---------------req: ", req);
   try {
     logger.debug('Getting Codeblocks')
     const filterBy = {
